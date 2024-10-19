@@ -1,0 +1,302 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root Variables for Consistency */
+:root {
+  --primary-color: #ff6347;
+  --secondary-color: #4caf50;
+  --dark-color: #333;
+  --light-color: #f9f9f9;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --font-family: 'Roboto', sans-serif;
+  --border-radius: 10px;
+}
+
+/* Body Styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Link Styles */
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* Button Styles */
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.primary-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+button.primary-btn:hover {
+  background-color: #ff4500;
+}
+
+button.secondary-btn {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+button.secondary-btn:hover {
+  background-color: #45a049;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: var(--dark-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  font-size: 18px;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Home Page */
+.home-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 32px;
+  color: var(--dark-color);
+  margin-bottom: 40px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.load-more-btn {
+  display: inline-block;
+  margin: 40px auto;
+  padding: 15px 30px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #45a049;
+}
+
+/* Movie Card */
+.movie-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.movie-card h3 {
+  font-size: 18px;
+  padding: 15px;
+  color: var(--dark-color);
+}
+
+.movie-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  transition: background-color 0.3s ease;
+}
+
+.movie-card button:hover {
+  background-color: #ff4500;
+}
+
+/* Login Page */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: var(--background-color);
+}
+
+.login-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--dark-color);
+}
+
+.login-container button {
+  padding: 12px 25px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  border-radius: var(--border-radius);
+}
+
+.login-container button:hover {
+  background-color: #ff4500;
+}
+
+/* Profile Page */
+.profile-container {
+  padding: 40px;
+  background-color: var(--light-color);
+}
+
+.profile-title {
+  font-size: 32px;
+  text-align: center;
+  color: var(--dark-color);
+  margin-bottom: 30px;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.movie-item {
+  display: flex;
+  flex-direction: column; /* Mengatur elemen dalam kolom */
+  align-items: center; /* Mengatur item agar berada di tengah */
+  margin-bottom: 20px; /* Jarak antar film */
+}
+
+.movie-item img {
+  max-width: 100%; /* Menjaga agar gambar tidak lebih besar dari kontainer */
+  height: auto; /* Menjaga proporsi gambar */
+}
+
+button {
+  background-color: #ff4500; /* Mengubah latar belakang tombol menjadi oranye */
+  color: white; /* Mengubah warna teks menjadi putih */
+  border: none; /* Menghapus border default */
+  border-radius: 5px; /* Menambahkan sudut membulat */
+  padding: 10px 15px; /* Menambahkan padding */
+  cursor: pointer; /* Mengubah kursor saat hover */
+  transition: background-color 0.3s; /* Menambahkan efek transisi */
+}
+
+button:hover {
+  background-color: #ff4500; /* Mengubah warna saat hover */
+}
+
+input {
+  width: 100%; /* Lebar input 100% dari kontainer */
+  max-width: 400px; /* Maksimal lebar input (sesuaikan dengan kebutuhan) */
+  padding: 10px; /* Menambahkan padding untuk ruang dalam */
+  font-size: 16px; /* Ukuran font di dalam input */
+  border: 1px solid #ccc; /* Border input */
+  border-radius: 5px; /* Sudut membulat */
+  margin-bottom: 10px; /* Jarak antar input */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk efek visual */
+}
+
+.movie-card {
+  text-align: center; /* Ini untuk memposisikan semua teks di card ke tengah */
+}
+
+.movie-card h3 {
+  margin: 10px 0; /* Mengatur margin agar tampilan lebih rapi */
+  font-size: 18px; /* Atur ukuran font sesuai kebutuhan */
+  text-align: center; /* Pastikan teks judul di tengah */
+}
+
+.release-date {
+  text-align: center; /* Pastikan tanggal juga di tengah */
+  font-size: 14px; /* Atur ukuran font tanggal sesuai kebutuhan */
+  color: gray; /* Opsional: Atur warna tanggal rilis */
+}
+
+.notification {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #808080; /* Warna hijau untuk pemberitahuan sukses */
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: center;
+  position: fixed; /* Menempatkan notifikasi di posisi tetap */
+  top: 20px; /* Jarak dari bagian atas */
+  right: 20px; /* Jarak dari sebelah kanan */
+  z-index: 1000; /* Pastikan notifikasi tetap di atas elemen lainnya */
+  animation: fadeInOut 3s forwards; /* Animasi fade in dan fade out */
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Tambahan untuk efek hilang (tidak diperlukan jika menggunakan animasi) */
+.notification.hide {
+  opacity: 0; /* Sembunyikan notifikasi dengan mengatur opasitas ke 0 */
+}
+
+
+
+
+
+  
